@@ -9,7 +9,7 @@ const subprocess = spawn(
   `cache="$RUNNER_TOOL_CACHE/bun/$1/$2"
   if [[ ! -d $cache ]]; then
     curl -fsSL https://bun.sh/install \\
-      | BUN_INSTALL="$cache" sh -s "bun-v$1" # &> /dev/null
+      | BUN_INSTALL="$cache" bash -s "bun-v$1" # &> /dev/null
   fi
   ls "$cache"
   exec "$cache/bin/bun" "$3"`,
