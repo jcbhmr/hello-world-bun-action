@@ -23,7 +23,7 @@ if (!existsSync(BUN_INSTALL)) {
   );
   await once(subprocess1, "exit");
 }
-const subprocess2 = spawn(join(DENO_INSTALL, "bin", "bun"), [file], {
+const subprocess2 = spawn(join(BUN_INSTALL, "bin", "bun"), [file], {
   stdio: "inherit",
 });
 await once(subprocess2, "spawn");
