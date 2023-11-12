@@ -11,5 +11,5 @@ outputs:
     description: The time we greeted you
 
 runs:
-  using: node20
-  main: _main.mjs
+  using: bun1
+  main: main.ts

@@ -8,7 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - id: main
-        uses: ./
-      - shell: cat {0}
-        run: ${{ toJSON(steps.main.outputs) }}
+      - uses: jcbhmr/configure-bun-action@v1
+      - uses: ./
