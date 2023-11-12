@@ -88,4 +88,5 @@ runs:
 [choosealicense.com]: https://choosealicense.com/
 [github actions marketplace]: https://github.com/marketplace?type=actions
 [0bsd licensed]: https://github.com/jcbhmr/hello-world-deno-action/blob/main/LICENSE
+[auto-install]: https://bun.sh/docs/runtime/autoimport
 <!-- prettier-ignore-end -->
