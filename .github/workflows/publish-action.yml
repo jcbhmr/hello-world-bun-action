@@ -10,7 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jcbhmr/configure-bun-action@v1
-      - uses: actions4git/add-commit-push@v1
+      - uses: actions4git/setup-git@v1
+      - run: git add -Af && git commit -m 'Automatic changes'
+      - run: git tag -f "$TAG" && git push -f origin "$TAG"
+        env:
+          TAG: ${{ github.event.release.tag_name }}
       - uses: actions/publish-action@v0.2.2
         with:
           source-tag: ${{ github.event.release.tag_name }}
